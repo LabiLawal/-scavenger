@@ -22,7 +22,7 @@ module.exports = (app, request, xray)=>{
                 do something with results.....
             })
          */
-        xray('https://www.amazon.com/s/ref=nb_sb_noss?url=search-alias%3Daps&field-keywords' + req., 'div.a-row.a-spacing-none', {
+        xray('https://www.amazon.com/s/ref=nb_sb_noss?url=search-alias%3Daps&field-keywords=' + req.product, 'div.a-row.a-spacing-none', {
             link: 'a.s-access-detail-page@href',
          })(function(err, results) {
                 if(links.push(results)){
