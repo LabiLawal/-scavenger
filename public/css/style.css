@@ -1,0 +1,88 @@
+*{
+    margin:0px;
+}
+body{   
+    background:rgba(25, 25, 26, 0.911);
+    height:200px;
+    width:700px;
+}
+img.logo{
+    display: inline-block;
+    width:50px;
+    height:50px;
+    margin-left:100px;
+}
+span.fly{
+    color: rgba(255, 255, 255, 0.973); 
+    position:absolute;
+    font-size:15px;
+    font-weight:bolder;
+    margin:5px;
+}
+span.prompt{
+    position: absolute;
+    margin-top:-5px;
+    margin-left:180px;
+    font-size:15px;
+    font-weight:bolder;
+    color: rgba(255, 255, 255, 0.973);
+}
+span.scavenger{
+    color:rgba(176, 212, 233, 0.973); 
+    display: inline-block;
+    position:absolute;
+    font-size:25px;
+    font-weight:bolder;
+    margin-top:-40px;
+    margin-left:150px;
+}
+div.frame{
+    height:50px;
+}
+input[type=email],
+input[type=password]{
+    background:rgba(43, 42, 42, 0.548);
+    color:rgb(209, 210, 211);
+    border-top:none;   
+    border-left:none;   
+    border-right:none;   
+    border:1px solid rgba(176, 212, 233, 0.973);
+    border-radius: 1px 1px 1px 1px;
+    padding:10px 20px 5px;
+    margin-left:23%;
+    margin-top:5%;
+    outline:none;
+    width:250px;
+}
+input[type=password]{
+    border-radius: 1px 1px 1px 1px;
+    margin-top:3%;   
+}
+button{
+    background: rgba(46, 161, 228, 0.973);
+    border: 1px solid  rgba(46, 161, 228, 0.973);
+    border-radius:5px;
+    color: rgba(255, 255, 255, 0.973);
+    cursor:pointer;    
+    width:200px;
+    margin-top:20px;
+    margin-left:200px;
+    margin-bottom:20px;
+    outline:none;
+    padding:10px 0px 10px 0px;
+}
+
+button:hover{
+    background: rgba(20, 146, 219, 0.973);
+    border: 1px solid rgba(20, 146, 219, 0.973);
+}
+button:active{
+   background: rgba(46, 161, 228, 0.973);
+    border: 1px solid  rgba(46, 161, 228, 0.973);
+}
+span.text{
+    font-size:15px;
+    position: absolute;
+    margin-top:15px;
+    margin-left:15px;
+}
