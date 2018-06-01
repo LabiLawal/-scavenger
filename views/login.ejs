@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+       body{
+    background: rgba(46, 46, 48, 0.911);
+        }
+       form{
+            border:1px solid rgba(46, 46, 48, 0.911);
+            box-shadow:0px 0px 1px 0px;
+            width:40%;
+            height:400px;
+            margin:10% 0% 0% 0%;
+        }
+        input[type=email],
+input[type=password]{
+    border-top:none;   
+    border-left:none;   
+    border-right:none;   
+    border:1px solid rgba(176, 212, 233, 0.973);
+    border-radius: 3px 3px 3px 3px;
+    padding:10px 20px 5px;
+    margin-top:10%;
+    outline:none;
+    width:250px;
+}
+input[type=password]{
+    border-radius: 3px 3px 3px 3px;
+    margin-top:3%;   
+}
+       button{
+        background: rgba(46, 161, 228, 0.973);
+        border: 1px solid  rgba(46, 161, 228, 0.973);
+        border-radius:5px;
+        color: rgba(255, 255, 255, 0.973);
+        cursor:pointer;    
+        width:200px;
+        margin-top:20px;
+        margin-bottom:20px;
+        outline:none;
+        padding:10px 0px 10px 0px;
+    }
+
+    button:hover{
+        background: rgba(20, 146, 219, 0.973);
+        border: 1px solid rgba(20, 146, 219, 0.973);
+    }
+    button:active{
+    background: rgba(46, 161, 228, 0.973);
+        border: 1px solid  rgba(46, 161, 228, 0.973);
+    }
+    .amazon{
+        color:orange;
+    }
+    span.scavenger{
+        color:rgb(61, 150, 202); 
+        display: inline-block;
+        position:absolute;
+        font-size:40px;
+        font-family: 'Bowlby One SC', cursive;
+        font-weight:bolder;
+        margin-top:-10%;
+        margin-left:150px;
+}
+    </style>
+     <img src="background.png" style="width:50px; height:50px; position: absolute; margin-top:-10%;margin-left:100px;"><span class="scavenger">Scavenger</span>
+    <center>
+       
+        <form action="/login" method="POST">
+            <p style="font-size:30px; color:white; font-weight:bolder; font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif";>
+                Scavenger</span> gets you the data, go on and 
+                Improve Your <span class="amazon">Amazon</span> Sales.<br>
+                       
+            </p>
+            <p style="position:absolute; z-index:-1px; margin-top:10px; margin-left:100px; border-top:1px solid white; width:30%; text-align:left; font-size:16px; color:white; font-weight:bolder;font-family:'Courier New', Courier, monospace;">
+               <span style="z-index:1px; position:absolute; margin-top:-10px; margin-left:-100px;"> Login with:</span>
+            </p>
+            
+            <input type="email" name="email" placeholder="Email"><br>
+            <input type="password" name="password" placeholder="Password"><br>
+            <button type="submit">submit</button>
+        
+
+        </form>
+    </center>
+</body>
+</html>

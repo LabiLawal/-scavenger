@@ -6,113 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
+    
+    
     <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css" >
     <link rel="stylesheet" href="css/animate.css" type="text/css" >
-    <style>
-        *{
-            margin:0px;
-        }
-      header{
-          background:rgba(25, 25, 26, 0.911);
-          border:1px solid rgba(25, 25, 26, 0.311);
-          box-shadow:1px 1px 2px 2px rgba(25, 25, 26, 0.300);
-          height:150px;
-          padding:0px 0px 0px 0px;
-          margin-top:-3%;
-        }
-      span.scavenger{
-        color:rgb(61, 150, 202); 
-        display: inline-block;
-        position:absolute;
-        font-size:40px;
-        font-weight:bolder;
-        margin-top:50px;
-        margin-left:150px;
-      }
-      input[class="search"]{  
-        border:1px solid rgba(25, 25, 26, 0.911);
-        border-radius: 4px 2px 2px 4px;
-        padding:10px 20px 9px 28px;
-        margin-top:2%;
-        outline:none;
-        width:250px;
-        }
-      button[type="submit"]{
-          border: rgba(34, 77, 156, 0.781);
-          border-radius:0% 5px 5px 0px;
-          background:rgb(34, 77, 156);
-          box-shadow:0px 0px 1px 1px rgb(3, 11, 24);
-          color:rgb(246, 249, 250);
-          font-weight:bolder;
-          height:36px;
-          margin-left:-6px;
-          outline:none;
-          cursor: pointer;
-        }
-      button[type="submit"]:hover{
-          border: rgba(34, 77, 156, 0.781);
-          background:rgb(34, 77, 156); 
-          box-shadow:0px 0px 3px 2px rgb(3, 11, 24);
-          cursor: pointer;
-        }
-        button[type="submit"]:active{
-            border: rgba(34, 77, 156, 0.781);
-            background:rgb(34, 77, 156);
-            box-shadow:0px 0px 1px 1px rgb(3, 11, 24);
-            cursor: pointer;
-        }
-      form{
-            margin:5%;
-        }
-      div.frame{   
-           border:2px solid rgba(25, 25, 26, 0.911);
-           border-radius:1%;
-           box-shadow:0px 1px 5px 3px rgba(25, 25, 26, 0.300);
-           margin-top:2%; 
-           margin-left:15%;
-           margin-bottom:30px;
-           height: 500px;
-           width:1000px;
-        }
-        table,th,td{
-            border:1px solid rgb(20, 62, 139);
-            border-collapse: collapse;
-        }
-        table{
-            width:inherit;
-        }
-        th{
-            background:rgb(20, 62, 139);
-            color:rgb(246, 249, 250);
-            font-weight:bolder;
-            padding:2% 0%;
-        }
-        td{
-            font-weight: b;
-            text-align:center;
-            padding:1.4% 0%;
-        }
-        span.load{
-            border: 1px solid black;
-            background: black;
-            border-radius:50%;
-            margin-top:30px;
-            margin-right:20px;
-            padding:50px;
-        }
-    </style>
-
-    <title>flydealz scavanger</title>
+    <link href="/css/appstyle.css" rel="stylesheet">
+  
+    <link rel="icon" href="/background.png" type="image/x-icon" /> 
+    <title>Flydealz scavanger</title>
 </head>
 <body class="app">
-    <script src="jquery-3.3.1.min.js"></script>
-    <script src="scavenger.js"></script>
 
     <header>
-        <img src="background.png" style="width:50px; height:50px; position: absolute; margin-top:50px;margin-left:100px;"><span class="scavenger">Scavenger</span>
+        <img src="background.png" style="width:50px; height:50px; position: absolute; margin-top:35px;margin-left:100px;"><span class="scavenger">Scavenger</span>
        <div>
             <form action="/search" method="POST">
-                <i class="fa fa-search" style="position: absolute;margin:35px 10px;z-index: 1;"></i>
                 <input class="search" type="text" name="product">
                 <button type="submit" id="btn">Get Product Data</button>
             </form>
@@ -122,17 +30,26 @@
         <table>
             <tr>
                 <th width="300px">Product name</th>
-                <th>Category</th>
-                <th>Price</th>
-                <th>#Rank</th>
-                <th>Reviews</th>
-                <th>Est. Sales</th>
-                <th>Est. Revenue</th>
+                <th width="250px">Category</th>
+                <th width="100px">Price</th>
+                <th>Rating</th>
+                <th>Seller</th>
+                <th width="200px">Est. Sales</th>
             </tr>
             <div>
-               
+               <% for(var i = 0; i < num ; i++){ %>
+                <tr>
+                    <td><%= data[0][i].name %></td>
+                    <td><%= data[0][i].category %></td>
+                    <td><%= data[0][i].price %></td>
+                    <td><%= data[0][i].rating %></td>
+                    <td><%= data[0][i].seller %></td>
+                    <td><%= data[0][i].estSales %></td>
+                </tr>
+               <% } %>
             </div>
         </table>
     </div>
+    <footer></footer>
 </body>
 </html>
